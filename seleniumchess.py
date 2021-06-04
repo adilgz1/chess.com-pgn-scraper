@@ -25,7 +25,6 @@ driver.find_element_by_name("login").click()
 
 page=1
 while True:
-    print(1)
     driver.get("https://www.chess.com/games/archive?gameOwner=my_game&gameTypes%5B0%5D=chess960&gameTypes%5B1%5D=daily&gameType=live&page="+str(page))
     try:
         selector = WebDriverWait(driver, 5).until(
@@ -42,7 +41,6 @@ while True:
         driver.quit()
         exit()
     page+=1
-    print(page)
 
 
 
